@@ -37,9 +37,6 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.mgDepartamentos = new MetroFramework.Controls.MetroGrid();
             this.depId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mbGuardar = new MetroFramework.Controls.MetroButton();
             this.tbId = new System.Windows.Forms.TextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -48,7 +45,9 @@
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.msltfDescripcion = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.depCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mgDepartamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentosBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -146,27 +145,6 @@
             this.depId.ReadOnly = true;
             this.depId.Visible = false;
             // 
-            // depCodigo
-            // 
-            this.depCodigo.DataPropertyName = "depCodigo";
-            this.depCodigo.HeaderText = "Código";
-            this.depCodigo.Name = "depCodigo";
-            this.depCodigo.ReadOnly = true;
-            this.depCodigo.Width = 50;
-            // 
-            // depDescripcion
-            // 
-            this.depDescripcion.DataPropertyName = "depDescripcion";
-            this.depDescripcion.HeaderText = "Descripción";
-            this.depDescripcion.Name = "depDescripcion";
-            this.depDescripcion.ReadOnly = true;
-            this.depDescripcion.Width = 200;
-            // 
-            // departamentosBindingSource
-            // 
-            this.departamentosBindingSource.DataSource = typeof(NanoAdministrativo.Model.Departamentos);
-            this.departamentosBindingSource.Sort = "";
-            // 
             // mbGuardar
             // 
             this.mbGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -254,44 +232,32 @@
             this.msltfDescripcion.TabStop = false;
             this.msltfDescripcion.UseSystemPasswordChar = false;
             // 
-            // metroTextBox1
+            // depCodigo
             // 
+            this.depCodigo.DataPropertyName = "depCodigo";
+            this.depCodigo.HeaderText = "Código";
+            this.depCodigo.Name = "depCodigo";
+            this.depCodigo.ReadOnly = true;
+            this.depCodigo.Width = 50;
             // 
+            // depDescripcion
             // 
+            this.depDescripcion.DataPropertyName = "depDescripcion";
+            this.depDescripcion.HeaderText = "Descripción";
+            this.depDescripcion.Name = "depDescripcion";
+            this.depDescripcion.ReadOnly = true;
+            this.depDescripcion.Width = 200;
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(53, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[] {
-        "metroTextBox1"};
-            this.metroTextBox1.Location = new System.Drawing.Point(486, 236);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(75, 23);
-            this.metroTextBox1.TabIndex = 12;
-            this.metroTextBox1.Text = "metroTextBox1";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // departamentosBindingSource
+            // 
+            this.departamentosBindingSource.DataSource = typeof(NanoAdministrativo.Model.Departamentos);
+            this.departamentosBindingSource.Sort = "";
             // 
             // frmDepartamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 476);
-            this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.msltfDescripcion);
             this.Controls.Add(this.tbBuscar);
             this.Controls.Add(this.metroLink1);
@@ -333,6 +299,5 @@
         private System.Windows.Forms.TextBox tbBuscar;
         private System.Windows.Forms.TextBox tbCodigo;
         private MaterialSkin.Controls.MaterialSingleLineTextField msltfDescripcion;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
     }
 }
